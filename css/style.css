@@ -1,1 +1,65 @@
-/* ini css *\
+/* ini css */
+
+.suhu-style {
+  font-size: 30px;
+  font-family: math;
+  font-style: inherit;
+}
+
+textarea {
+  width: 500px;
+  height: 95px;
+  border-radius: 10px;
+  background: rgb(201, 206, 208);
+}
+
+.form-btn {
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  width: 100px;
+}
+
+/* Warna tombol konversi */
+.konversi-btn {
+  background-color: rgb(118, 251, 118);
+  color: black;
+}
+
+.konversi-btn:hover {
+  background-color: green;
+  color: white;
+}
+
+/* Warna tombol reset */
+.reset-btn {
+  background-color: rgb(254, 93, 93);
+  color: black;
+}
+
+.reset-btn:hover {
+  background-color: rgb(255, 0, 0);
+  color: white;
+}
+
+/* Warna tombol reverse */
+.reverse-btn {
+  background-color: rgb(105, 105, 255);
+  color: rgb(0, 0, 0);
+}
+
+.reverse-btn:hover {
+  background-color: blue;
+  color: white;
+}
+
+/* footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: hsl(0, 0%, 100%);
+  padding: 10px;
+  font-size: 0.9em;
+  color: #000000;
+} */

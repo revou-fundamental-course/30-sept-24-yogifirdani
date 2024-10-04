@@ -1,12 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Achmad Yogi Firdani</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body
+    style="
+      margin: 0;
+      background-image: url('img/img1.jpg');
+      background-size: cover; /* Mengatur gambar agar menutupi seluruh area */
+      background-position: center; /* Menempatkan gambar di tengah */
+      background-repeat: no-repeat; /* Tidak mengulangi gambar */
+      background-attachment: fixed; /* Membuat gambar tetap saat halaman discroll */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh; /* Tinggi 100% dari viewport */
+    "
+  >
+    <header>
+      <h1>Kalkulator Konversi Suhu</h1>
+    </header>
+
+    <main>
+      <!-- form konten -->
+      <section>
+        <!-- intruksi -->
+        <article>
+          <p>
+            Masukkan suhu derajat Celcius (&deg;C) ke kotak dibawah, lalu klik
+            Konversi <br />
+            untuk mendapatkan hasil konversi dalam bentuk Fahrenheit (&deg;F)
+          </p>
+        </article>
+
+        <!-- inputan suhu -->
+        <form>
+          <div>
+            <label for="input-suhu">Celsius (&deg;C)</label>
+          </div>
+          <textarea></textarea>
+          <br />
+          <div class="button-warapper">
+            <button class="form-btn konversi-btn">Konversi</button>
+            <button class="form-btn reset-btn">Reset</button>
+            <button class="form-btn reverse-btn">Reverse</button>
+          </div>
+        </form>
+        <br />
+        <form>
+          <div>
+            <label for="input-suhu">Fahrenheit (&deg;F)</label>
+          </div>
+          <textarea></textarea>
+        </form>
+        <br />
+        <form>
+          <div>
+            <label for="input-suhu">Cara Kalkulasi :</label>
+          </div>
+          <textarea></textarea>
+        </form>
+
+        <!-- hasil inputan -->
+        <div>
+          <br />
+          <div>
+            <label style="color: darkmagenta;" for="hasil-suhu">Fahrenheit ke Celsius</label>
+          </div>
+        </div>
+
+        <!-- cara kalkulasi -->
+        <div></div>
+      </section>
+
+      <!-- info konten -->
+      <section>
+        <header>
+          <h2>Cara Konversi Dari Celcius (&deg;C) ke fahrenheit (&deg;F)</h2>
+        </header>
+        <hr />
+
+        <article>
+          <div>
+            <p>
+              Suhu <span class="suhu-style">S</span> dalam derajat Fahrenheit
+              (&deg;F) sama dengan suhu <span>S</span> dalam derajat <br />
+              Celcius (&deg;C) kali 9/5 tambah 32.
+            </p>
+          </div>
+          <div>
+            <p>
+              <strong>S<sup>(&deg;F)</sup></strong> = (<strong
+                >S<sup>(&deg;C)</sup></strong
+              >
+              &times; 9/5) + 32 (&deg;F)
+            </p>
+            <p>atau</p>
+            <p>
+              <strong>S<sup>(&deg;F)</sup></strong> = (<strong
+                >S<sup>(&deg;C)</sup></strong
+              >
+              &times; 1.8) + 32
+            </p>
+          </div>
+        </article>
+      </section><br>
+    </main>
+    <!-- end info konten -->
+
+
+    <!-- footer -->
+    <footer>
+      &copy; 2024 Nama yogifirdani. All rights reserved.
+    </footer>
     
-</body>
+  </body>
 </html>
