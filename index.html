@@ -9,7 +9,7 @@
   <body
     style="
       margin: 0;
-      background-image: url('img/img1.jpg');
+      background-image: url('img/img2.png');
       background-size: cover; /* Mengatur gambar agar menutupi seluruh area */
       background-position: center; /* Menempatkan gambar di tengah */
       background-repeat: no-repeat; /* Tidak mengulangi gambar */
@@ -42,7 +42,7 @@
           <div>
             <label for="input-suhu">Celsius (&deg;C)</label>
           </div>
-          <textarea></textarea>
+          <textarea id="input-suhu"></textarea>
           <br />
           <div class="button-warapper">
             <button class="form-btn konversi-btn">Konversi</button>
@@ -69,7 +69,9 @@
         <div>
           <br />
           <div>
-            <label style="color: darkmagenta;" for="hasil-suhu">Fahrenheit ke Celsius</label>
+            <label style="color: darkmagenta" for="hasil-suhu"
+              >Fahrenheit ke Celsius</label
+            >
           </div>
         </div>
 
@@ -108,15 +110,14 @@
             </p>
           </div>
         </article>
-      </section><br>
+      </section>
+      <br />
     </main>
     <!-- end info konten -->
 
-
     <!-- footer -->
-    <footer>
-      &copy; 2024 Nama yogifirdani. All rights reserved.
-    </footer>
-    
+    <footer>&copy; 2024 Nama yogifirdani. All rights reserved.</footer>
+
+    <script src="js/validasi.js"></script>
   </body>
 </html>
