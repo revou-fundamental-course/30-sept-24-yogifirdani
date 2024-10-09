@@ -6,21 +6,7 @@
     <title>Achmad Yogi Firdani</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body
-    style="
-      margin: 0;
-      background-image: url('img/img2.png');
-      background-size: cover; /* Mengatur gambar agar menutupi seluruh area */
-      background-position: center; /* Menempatkan gambar di tengah */
-      background-repeat: no-repeat; /* Tidak mengulangi gambar */
-      background-attachment: fixed; /* Membuat gambar tetap saat halaman discroll */
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh; /* Tinggi 100% dari viewport */
-    "
-  >
+  <body>
     <header>
       <h1>Kalkulator Konversi Suhu</h1>
     </header>
@@ -53,16 +39,16 @@
         <br />
         <form>
           <div>
-            <label for="input-suhu">Fahrenheit (&deg;F)</label>
+            <label for="output-fahrenheit">Fahrenheit (&deg;F)</label>
           </div>
-          <textarea></textarea>
+          <textarea id="fahrenheit"></textarea>
         </form>
         <br />
         <form>
           <div>
-            <label for="input-suhu">Cara Kalkulasi :</label>
+            <label for="output-cara">Cara Kalkulasi :</label>
           </div>
-          <textarea></textarea>
+          <textarea id="carakalkulasi"></textarea>
         </form>
 
         <!-- hasil inputan -->
@@ -110,7 +96,7 @@
     <!-- end info konten -->
 
     <!-- footer -->
-    <footer>&copy; 2024 Nama yogifirdani. All rights reserved.</footer>
+    <footer>&copy; 2024 yogifirdani. All rights reserved.</footer>
 
     <script src="js/validasi.js"></script>
   </body>

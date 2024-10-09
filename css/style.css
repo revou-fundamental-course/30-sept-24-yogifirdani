@@ -1,4 +1,17 @@
 /* ini css */
+body {
+  margin: 0;
+  background-image: url("../img/img2.png");
+  background-size: cover; /* Mengatur gambar agar menutupi seluruh area */
+  background-position: center; /* Menempatkan gambar di tengah */
+  background-repeat: no-repeat; /* Tidak mengulangi gambar */
+  background-attachment: fixed; /* Membuat gambar tetap saat halaman discroll */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Tinggi 100% dari viewport */
+}
 
 .suhu-style {
   font-size: 30px;

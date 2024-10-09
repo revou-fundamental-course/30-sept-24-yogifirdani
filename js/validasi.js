@@ -1,6 +1,7 @@
-
 // Get the textarea element
 const inputSuhu = document.getElementById("input-suhu");
+const hasilFahrenhait = document.getElementById("fahrenheit");
+const caraKalkulasi = document.getElementById("carakalkulasi");
 
 // Add event listener to the Konversi button
 document.querySelector(".konversi-btn").addEventListener("click", (e) => {
@@ -22,11 +23,13 @@ document.querySelector(".konversi-btn").addEventListener("click", (e) => {
 
   // Perform the conversion from Celsius to Fahrenheit
   const fahrenheitValue = (parseFloat(inputValue) * 9) / 5 + 32;
-  alert(`Nilai dalam Fahrenheit adalah: ${fahrenheitValue}`);
+  // alert(`Nilai dalam Fahrenheit adalah: ${fahrenheitValue}`);
+  hasilFahrenhait.innerText = fahrenheitValue;
+  caraKalkulasi.innerText= `(${inputSuhu.value} * 9)/5 +32`
 
   // Perform the reverse operation (optional)
   const reverseValue = ((fahrenheitValue - 32) * 5) / 9;
-  alert(`Nilai terbalik dalam Celcius adalah: ${reverseValue}`);
+ // alert(`Nilai terbalik dalam Celcius adalah: ${reverseValue}`);
 });
 
 // Add event listener to the Reset button
