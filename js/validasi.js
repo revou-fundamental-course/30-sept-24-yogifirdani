@@ -1,56 +1,52 @@
-// Get the textarea element
+// Get elements
 const inputSuhu = document.getElementById("input-suhu");
 const hasilFahrenhait = document.getElementById("fahrenheit");
 const caraKalkulasi = document.getElementById("carakalkulasi");
 
-// Add event listener to the Konversi button
+// Function to validate input
+const isValidInput = (inputValue) => {
+  return (
+    inputValue !== "" && !isNaN(parseFloat(inputValue)) && isFinite(inputValue)
+  );
+};
+
+// Function to convert Celsius to Fahrenheit
+const convertToFahrenheit = (celsius) => {
+  return (celsius * 9) / 5 + 32;
+};
+
+// Event listener for the Konversi button
 document.querySelector(".konversi-btn").addEventListener("click", (e) => {
-  e.preventDefault(); // prevent form submission
+  e.preventDefault();
 
-  // Validate the input value
   const inputValue = inputSuhu.value.trim();
-  if (inputValue === "") {
-    alert("Silakan masukkan nilai untuk Celsius");
+
+  if (!isValidInput(inputValue)) {
+    alert("Masukkan nilai Celsius yang valid.");
     return;
   }
 
-  // Check if the input value is a valid number
-  const isValidNumber = !isNaN(parseFloat(inputValue)) && isFinite(inputValue);
-  if (!isValidNumber) {
-    alert("Nilai masukan tidak valid. Harap masukkan angka yang valid");
-    return;
-  }
-
-  // Perform the conversion from Celsius to Fahrenheit
-  const fahrenheitValue = (parseFloat(inputValue) * 9) / 5 + 32;
-  // alert(`Nilai dalam Fahrenheit adalah: ${fahrenheitValue}`);
+  const fahrenheitValue = convertToFahrenheit(parseFloat(inputValue));
   hasilFahrenhait.innerText = fahrenheitValue;
-  caraKalkulasi.innerText= `(${inputSuhu.value} * 9)/5 +32`
-
-  // Perform the reverse operation (optional)
-  const reverseValue = ((fahrenheitValue - 32) * 5) / 9;
- // alert(`Nilai terbalik dalam Celcius adalah: ${reverseValue}`);
+  caraKalkulasi.innerText = `(${inputValue} * 9)/5 +32`;
 });
 
-// Add event listener to the Reset button
+// Event listener for the Reset button
 document.querySelector(".reset-btn").addEventListener("click", () => {
   inputSuhu.value = "";
+  hasilFahrenhait.innerText = "";
+  caraKalkulasi.innerText = "";
 });
 
-// Add event listener to the Reverse button
+// Event listener for the Reverse button
 document.querySelector(".reverse-btn").addEventListener("click", () => {
   const inputValue = inputSuhu.value.trim();
-  if (inputValue === "") {
-    alert("Silakan masukkan nilai untuk Celsius");
+
+  if (!isValidInput(inputValue)) {
+    alert("Masukkan nilai Fahrenheit yang valid.");
     return;
   }
 
-  const isValidNumber = !isNaN(parseFloat(inputValue)) && isFinite(inputValue);
-  if (!isValidNumber) {
-    alert("Nilai masukan tidak valid. Harap masukkan angka yang valid");
-    return;
-  }
-
-  const reverseValue = ((parseFloat(inputValue) - 32) * 5) / 9;
-  alert(`Nilai terbalik dalam Celcius adalah: ${reverseValue}`);
+  const celsiusValue = ((parseFloat(inputValue) - 32) * 5) / 9;
+  alert(`Nilai dalam Celsius adalah: ${celsiusValue}`);
 });

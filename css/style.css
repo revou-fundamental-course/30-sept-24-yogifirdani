@@ -24,6 +24,7 @@ textarea {
   height: 95px;
   border-radius: 10px;
   background: rgb(220, 239, 247);
+  font-size: 20px;
 }
 
 .form-btn {
